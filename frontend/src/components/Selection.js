@@ -7,7 +7,7 @@ export default function Selection() {
 
     useEffect(() => {
         setLoading(true);
-        fetch("http://localhost:3001/selection")
+        fetch("http://localhost:3001/selection?type=character")
             .then((res) => res.json())
             .then((data) => {
                 setData(data);
