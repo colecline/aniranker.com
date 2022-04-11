@@ -64,7 +64,7 @@ function scrapePage(limit) {
 
             characterPictureIds[i] = pictureId;
 
-            fs.appendFileSync("images.txt", image_url + "\n")
+            fs.appendFileSync("images_characters.txt", image_url + "\n")
         });
 
         for (let inc = 0; inc < characterNames.length; inc++) {

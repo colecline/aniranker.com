@@ -28,7 +28,7 @@ export default function Selection() {
 
             <div className="pl-4">
                 <AnimeCharacter 
-                src={`/images/${data[0].picture_id}.jpg`} 
+                src={`/images/characters/${data[0].picture_id}.jpg`} 
                 name={data[0].name} 
                 anime={data[0].anime} 
                 url={data[0].url} 
@@ -41,7 +41,7 @@ export default function Selection() {
 
             <div className="pr-4">
                 <AnimeCharacter 
-                src={`/images/${data[1].picture_id}.jpg`} 
+                src={`/images/characters/${data[1].picture_id}.jpg`} 
                 name={data[1].name} 
                 anime={data[1].anime} 
                 url={data[1].url} 

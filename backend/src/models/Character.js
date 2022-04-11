@@ -5,7 +5,7 @@ const CharacterSchema = new mongoose.Schema({
     anime: { type: String, required: true },
     url: { type: String, required: true },
     picture_id: { type: String, required: true },
-    rating: { type: Number, default: 1000 }
+    rating: { type: Number, default: 1200 }
 });
 
 const Character = mongoose.model("Character", CharacterSchema);

@@ -39,7 +39,7 @@ function LeaderboardPage(data) {
                             <TableElement 
                             name={item.name} 
                             anime={item.anime} 
-                            src={`/images/${item.picture_id}.jpg`} 
+                            src={`/images/characters/${item.picture_id}.jpg`} 
                             rank={(parseInt(data.next.page - 2) * 25) + 1 + i}
                             rating={item.rating} 
                             bg_color={i % 2 == 0 ? "bg-gray-100" : "bg-gray-200"} />
