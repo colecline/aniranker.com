@@ -57,7 +57,7 @@ export default function Leaderboard() {
                             <TableElement 
                             name={item.name} 
                             anime={item.anime} 
-                            src={`/images/${item.picture_id}.jpg`} 
+                            src={`/images/characters/${item.picture_id}.jpg`} 
                             rank={i+1}
                             rating={item.rating} 
                             bg_color={i % 2 == 0 ? "bg-gray-100" : "bg-gray-200"} />
