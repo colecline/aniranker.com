@@ -1,5 +1,6 @@
-const Character = require("../models/Character");
+const RatingService = require("./RatingService");
 const mt = require("../util/mersenne-twister");
+const Character = require("../models/Character");
 
 class SelectionService {
     async #getTwoRandomNumbers(count) {
@@ -11,13 +12,6 @@ class SelectionService {
     }
     
     async getRandomCharacters() {
-
-        // // check if the request has either a "character" or "anime".
-        // if (type !== "character" && type !== "anime") {
-        //     return ""
-        // }
-    
-        // get the number of documents in the database (if character)
         const count = await Character.count();
 
         const randomNumbers = await this.#getTwoRandomNumbers(count);
@@ -28,6 +22,17 @@ class SelectionService {
         const result2 = Character.findOne().select((["-_id", "-__v", "-rating" ])).skip(rand2);
     
         return Promise.all([result1, result2]);
+    }
+
+    async updateCharacterRatings(winnerUrl, loserUrl) {
+        const winner = await Character.findOne({ url: winnerUrl });
+        const loser = await Character.findOne({ url: loserUrl });
+
+        const [updatedWinnerRating, updatedLoserRating] = RatingService.getUpdatedRatings(winner.rating, loser.rating);
+        winner.rating = updatedWinnerRating, loser.rating = updatedLoserRating;
+        winner.save(), loser.save();
+
+        return Promise.resolve("Success");
     }
 }
 
