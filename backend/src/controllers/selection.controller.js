@@ -14,8 +14,15 @@ async function getSelection(req, res) {
 
 async function postSelection(req, res) {
     const { winnerUrl, loserUrl } = req.body;
-    const result = await SelectionService.updateCharacterRatings(winnerUrl, loserUrl);
-    return res.status(200).json("Success");
+    if (req.query.type == "characters") {
+        const result = await SelectionService.updateCharacterRatings(winnerUrl, loserUrl);
+        return res.status(200).json("Success");
+    } else if (req.query.type == "anime") {
+        const result = await SelectionService.updateAnimeRatings(winnerUrl, loserUrl);
+        return res.status(200).json("Success");
+    } else {
+        return res.status(400).json("Bad Request");
+    }
 }
 
 module.exports = {
