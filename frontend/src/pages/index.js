@@ -3,7 +3,7 @@ export default function Home() {
     return (
         <>
 
-        <div className="bg-white rounded-lg shadow-lg p-10 mx-10 mb-5">
+        <div className="bg-white rounded-lg shadow-lg p-10 mx-10 mb-8">
             <div className="flex justify-center mb-3 space-x-3">
                 <img src="/images/characters/289337.jpg" className="border-4 border-gray-400" />
                 <img src="/images/characters/292046.jpg" className="border-4 border-gray-400" />
