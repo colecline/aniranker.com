@@ -1,7 +1,7 @@
 const SelectionService = require("../services/SelectionService");
 
 async function getSelection(req, res) {
-    if (req.query.type == "character") {
+    if (req.query.type == "characters") {
         const result = await SelectionService.getRandomCharacters();
         return res.status(200).json(result);
     } else if (req.query.type == "anime") {

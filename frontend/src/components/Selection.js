@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
-import AnimeCharacter from "./AnimeCharacter";
+import Character from "./select/Character";
+import Anime from "./select/Anime";
 
-export default function Selection() {
+export default function Selection(props) {
     const [data, setData] = useState(null);
     const [isLoading, setLoading] = useState(false);
 
     useEffect(() => {
         setLoading(true);
-        fetch("http://localhost:3001/selection?type=character")
+        fetch(`http://localhost:3001/selection?type=${props.type}`)
             .then((res) => res.json())
             .then((data) => {
                 setData(data);
@@ -27,12 +28,7 @@ export default function Selection() {
         <div className="flex justify-center bg-white rounded-lg shadow-lg mx-10 py-10">
 
             <div className="pl-4">
-                <AnimeCharacter 
-                src={`/images/characters/${data[0].picture_id}.jpg`} 
-                name={data[0].name} 
-                anime={data[0].anime} 
-                url={data[0].url} 
-                otherUrl={data[1].url} />
+                { props.type == "characters" ? <Character src={`/images/${props.type}/${data[0].picture_id}.jpg`} name={data[0].name} anime={data[0].anime} url={data[0].url} otherUrl={data[1].url} /> : <Anime src={`/images/${props.type}/${data[0].picture_id}.jpg`} title={data[0].title} url={data[0].url} otherUrl={data[1].url} /> }
             </div>
 
             <div className="my-auto md:mx-10 mx-5">
@@ -40,12 +36,7 @@ export default function Selection() {
             </div>
 
             <div className="pr-4">
-                <AnimeCharacter 
-                src={`/images/characters/${data[1].picture_id}.jpg`} 
-                name={data[1].name} 
-                anime={data[1].anime} 
-                url={data[1].url} 
-                otherUrl={data[0].url} />
+            { props.type == "characters" ? <Character src={`/images/${props.type}/${data[1].picture_id}.jpg`} name={data[1].name} anime={data[1].anime} url={data[1].url} otherUrl={data[0].url} /> : <Anime src={`/images/${props.type}/${data[1].picture_id}.jpg`} title={data[1].title} url={data[1].url} otherUrl={data[0].url} /> }
             </div>
 
         </div>
