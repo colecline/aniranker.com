@@ -12,9 +12,7 @@ export default function TableElement(props) {
                 <img className="object-contain h-32 rounded-lg" src={props.src} />
                 <h3 className="my-auto ml-4 font-bold">{props.name}</h3>
             </td>
-            <td>
-                <h3 className="font-bold">{props.anime}</h3>
-            </td>
+            {props.anime === undefined ? <></>: <td><h3 className="font-bold">{props.anime}</h3></td> }
         </tr>
         </>
     )

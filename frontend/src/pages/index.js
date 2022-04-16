@@ -27,7 +27,7 @@ export default function Home() {
             <div className="text-center">
                 <h2 className="text-2xl font-bold">Rank Anime Shows</h2>
                 <p className="text-md text-gray-500 mb-2">Rank and choose the best anime shows.</p>
-                <button className="bg-indigo-500 text-white p-2 rounded-md font-semibold border-b-4 border-indigo-700 "><a href="/select/characters">Rank Anime</a></button>                
+                <button className="bg-indigo-500 text-white p-2 rounded-md font-semibold border-b-4 border-indigo-700 "><a href="/select/anime">Rank Anime</a></button>                
             </div>
         </div>
 

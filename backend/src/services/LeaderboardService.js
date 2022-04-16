@@ -1,3 +1,4 @@
+const Anime = require("../models/Anime");
 const Character = require("../models/Character");
 
 class LeaderboardService {
@@ -36,6 +37,38 @@ class LeaderboardService {
         characters.result = result;
         return Promise.resolve(characters);
     }
+
+    async #getAnimeShows(page) {
+        const result = await Anime
+            .find()
+            .select((["-_id", "-__v" ]))
+            .sort({ rating: "descending" })
+            .skip((page - 1) * 25)
+            .limit(25);
+        const numberOfAnimes = await Anime.count();
+
+        const animes = new Object();
+
+        animes.meta = {
+            success: true,
+            total_count: numberOfAnimes,
+            page_count: numberOfAnimes / 25,
+            current_page: parseInt(page)
+        }
+
+        animes.next = {
+            page: parseInt(page) + 1
+        }
+
+        if (page > 1) {
+            animes.previous = {
+                page: parseInt(page) - 1
+            }
+        }
+
+        animes.result = result;
+        return Promise.resolve(animes);
+    }
     
     async getLeaderboard(page, type) {
 
@@ -47,7 +80,8 @@ class LeaderboardService {
             const result = await this.#getCharacters(page);
             return Promise.resolve(result);
         } else if (type == "anime") {
-            return Promise.reject("Not Implemented");
+            const result = await this.#getAnimeShows(page);
+            return Promise.resolve(result);
         } else {
             return Promise.reject("Bad Type");
         }

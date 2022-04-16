@@ -6,10 +6,9 @@ import {
 } from "@heroicons/react/outline";
 
 const navigation = [
-    { name: 'RANK', href: 'http://localhost:3000/select/characters' },
-    { name: 'LEADERBOARD', href: 'http://localhost:3000/leaderboard'},
-    { name: 'ABOUT', href: 'http://localhost:3000/about' },
-    { name: 'DISCORD', href: 'https://discord.gg/Q8w9dA2HHc' },
+    { name: 'Rank Characters', href: 'http://localhost:3000/select/characters' },
+    { name: 'Rank Anime', href: 'http://localhost:3000/select/anime' },
+    { name: 'Leaderboard', href: 'http://localhost:3000/leaderboard/characters'},
 ];
 
 function classNames(...classes) {

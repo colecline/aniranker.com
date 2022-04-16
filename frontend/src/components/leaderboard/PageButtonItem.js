@@ -1,5 +1,5 @@
 export default function PageButtonItem(props) {
-    let url = `http://localhost:3000/leaderboard/${props.number}`
+    let url = `http://localhost:3000/leaderboard/${props.type}/${props.number}`
     
     if (props.isCurrent == true) {
         return (
