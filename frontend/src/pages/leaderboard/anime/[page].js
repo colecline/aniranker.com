@@ -53,7 +53,7 @@ function AnimeLeaderboardPage(data) {
 AnimeLeaderboardPage.getInitialProps = async (ctx) => {
     const { page } = ctx.query;
 
-    const res = await fetch(`http://localhost:3001/leaderboard?type=anime&page=${page}`);
+    const res = await fetch(`http://api.aniranker.com/leaderboard?type=anime&page=${page}`);
     const json = await res.json();
 
     return json;

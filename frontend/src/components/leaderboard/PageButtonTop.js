@@ -9,7 +9,7 @@ export default function PageButtonTop(props) {
   function buildItems(currentPageNumber) {
       
       if (!(currentPageNumber == 1)) {
-          buttons.push(<a href={`http://localhost:3000/leaderboard/${props.type}/${props.current - 1}`} className="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"><span className="sr-only">Previous</span><ChevronLeftIcon className="h-5 w-5" aria-hidden="true" /></a>)
+          buttons.push(<a href={`http://aniranker.com/leaderboard/${props.type}/${props.current - 1}`} className="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"><span className="sr-only">Previous</span><ChevronLeftIcon className="h-5 w-5" aria-hidden="true" /></a>)
       }
 
       if (currentPageNumber >= 1 && currentPageNumber <= 3) {
@@ -50,7 +50,7 @@ export default function PageButtonTop(props) {
       }
       
       if (!(currentPageNumber == props.pages)) {
-          buttons.push(<a href={`http://localhost:3000/leaderboard/${props.type}/${props.current + 1}`} className="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"><span className="sr-only">Previous</span><ChevronRightIcon className="h-5 w-5" aria-hidden="true" /></a>)
+          buttons.push(<a href={`http://aniranker.com/leaderboard/${props.type}/${props.current + 1}`} className="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"><span className="sr-only">Previous</span><ChevronRightIcon className="h-5 w-5" aria-hidden="true" /></a>)
       }
 
       return buttons;
@@ -71,7 +71,7 @@ export default function PageButtonTop(props) {
           <a href="javascript:void(0);">Characters</a>
         </button>
         <button className='bg-gray-300 text-gray-500 px-2 py-1 text-sm font-bold rounded-tr-md rounded-br-md'>
-          <a href="http://localhost:3000/leaderboard/anime">Anime</a>
+          <a href="http://aniranker.com/leaderboard/anime">Anime</a>
         </button>
         </>
       )
@@ -79,7 +79,7 @@ export default function PageButtonTop(props) {
       return (
         <>
         <button className='bg-gray-300 text-gray-500 px-2 py-1 text-sm font-bold rounded-tl-md rounded-bl-md'>
-          <a href="http://localhost:3000/leaderboard/characters">Characters</a>
+          <a href="http://aniranker.com/leaderboard/characters">Characters</a>
         </button>
         <button className='bg-indigo-500 text-white px-2 py-1 text-sm font-bold rounded-tr-md rounded-br-md'>
           <a href="javascript:void(0);">Anime</a>

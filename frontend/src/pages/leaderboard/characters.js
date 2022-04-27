@@ -54,7 +54,7 @@ function CharactersLeaderboardDefault(data) {
 CharactersLeaderboardDefault.getInitialProps = async (ctx) => {
     const { page } = ctx.query;
 
-    const res = await fetch(`http://localhost:3001/leaderboard?type=characters&page=1`);
+    const res = await fetch(`http://api.aniranker.com/leaderboard?type=characters&page=1`);
     const json = await res.json();
 
     return json;

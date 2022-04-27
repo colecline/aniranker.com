@@ -9,7 +9,7 @@ export default function PageButton(props) {
   function buildItems(currentPageNumber) {
       
       if (!(currentPageNumber == 1)) {
-          buttons.push(<a href={`http://localhost:3000/leaderboard/${props.type}/${props.current - 1}`} className="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"><span className="sr-only">Previous</span><ChevronLeftIcon className="h-5 w-5" aria-hidden="true" /></a>)
+          buttons.push(<a href={`http://aniranker.com/leaderboard/${props.type}/${props.current - 1}`} className="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"><span className="sr-only">Previous</span><ChevronLeftIcon className="h-5 w-5" aria-hidden="true" /></a>)
       }
 
       if (currentPageNumber >= 1 && currentPageNumber <= 3) {
@@ -50,7 +50,7 @@ export default function PageButton(props) {
       }
       
       if (!(currentPageNumber == props.pages)) {
-          buttons.push(<a href={`http://localhost:3000/leaderboard/${props.type}/${props.current + 1}`} className="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"><span className="sr-only">Previous</span><ChevronRightIcon className="h-5 w-5" aria-hidden="true" /></a>)
+          buttons.push(<a href={`http://aniranker.com/leaderboard/${props.type}/${props.current + 1}`} className="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"><span className="sr-only">Previous</span><ChevronRightIcon className="h-5 w-5" aria-hidden="true" /></a>)
       }
 
       return buttons;
