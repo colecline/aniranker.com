@@ -30,7 +30,7 @@ export default function Header() {
                     <div className="flex space-x-6 items-center">
 
                         {/* Navigation Bar Logo */}
-                        <a href="http://localhost:3000/" className="text-xl font-bold lowercase">AniRanker</a>
+                        <a href="http://aniranker.com/" className="text-xl font-bold lowercase">AniRanker</a>
 
                         {/* Logo and Left Navigation Spacer */}
                         <div className="hidden md:flex bg-gray-300 w-0.5"><div className="text-gray-300 opacity-10">|</div></div>
