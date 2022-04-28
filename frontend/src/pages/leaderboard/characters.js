@@ -1,3 +1,5 @@
+import Head from "next/head";
+
 import TableElement from "../../components/leaderboard/TableElement";
 import PageButton from "../../components/leaderboard/PageButton";
 import PageButtonTop from "../../components/leaderboard/PageButtonTop";
