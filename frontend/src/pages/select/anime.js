@@ -23,7 +23,7 @@ export default function SelectAnime() {
             <div className="flex justify-center mt-3">
             <a href="https://aniranker.com/leaderboard/anime">
                 <button className="bg-indigo-500 p-2 rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-700 duration-300 text-white text-md font-semibold">
-                    Character Leaderboard
+                    Anime Leaderboard
                 </button>
             </a>
             </div>
