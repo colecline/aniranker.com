@@ -21,7 +21,7 @@ export default function SelectAnime() {
             <h1 className="text-3xl font-bold">Select an Anime</h1>
             <p className="text-gray-600 text-sm">Click the image of the better anime to rank them.</p>
             <div className="flex justify-center mt-3">
-            <a href="https://aniranker.com/leaderboard/characters">
+            <a href="https://aniranker.com/leaderboard/anime">
                 <button className="bg-indigo-500 p-2 rounded-md transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-700 duration-300 text-white text-md font-semibold">
                     Character Leaderboard
                 </button>
