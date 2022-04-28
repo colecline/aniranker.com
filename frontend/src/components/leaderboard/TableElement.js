@@ -9,7 +9,7 @@ export default function TableElement(props) {
                 <span className="text-xs">({props.rating})</span>
             </td>
             <td className="flex justify-left my-2">
-                <img className="object-contain h-32 rounded-lg" src={props.src} />
+                <img className="object-contain h-32 rounded-lg" alt={props.name} src={props.src} />
                 <h3 className="my-auto ml-4 font-bold">{props.name}</h3>
             </td>
             {props.anime === undefined ? <></>: <td><h3 className="font-bold">{props.anime}</h3></td> }
