@@ -1,6 +1,6 @@
 const cors = require("cors");
 
-const whitelist = new Set(["http://localhost:3000", "http://localhost:3002"]);
+const whitelist = new Set(["http://aniranker.com", "https://aniranker.com"]);
 
 const corsOptions = {
     optionsSuccessStatus: 200,
