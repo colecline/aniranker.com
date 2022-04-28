@@ -30,7 +30,14 @@ export default function Header() {
                     <div className="flex space-x-6 items-center">
 
                         {/* Navigation Bar Logo */}
-                        <a href="http://aniranker.com/" className="text-xl font-bold lowercase">AniRanker</a>
+                        <div className="flex">
+                        <a href="http://aniranker.com/">
+                            <span className="text-xl font-bold lowercase">AniRank</span>
+                        </a>
+                        <a href="http://aniranker.com/" className="mt-0.5">
+                            <span className="uppercase font-extrabold text-xs text-gray-400 ml-2">Beta</span>
+                        </a>
+                        </div>
 
                         {/* Logo and Left Navigation Spacer */}
                         <div className="hidden md:flex bg-gray-300 w-0.5"><div className="text-gray-300 opacity-10">|</div></div>
