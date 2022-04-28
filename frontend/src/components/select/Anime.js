@@ -7,7 +7,8 @@ export default function Anime(props) {
             <a href="javascript:void(0);">
                 <div className="transition ease-in-out delay-150 hover:scale-105 border-8 border-gray-500 hover:border-green-500 rounded-lg bg-gray-700">
                     <img 
-                    src={props.src} 
+                    src={props.src}
+                    alt={props.title} 
                     onClick={props.imageClick}
                     class="object-contain h-80 w-56 items-center mx-auto"/>
 

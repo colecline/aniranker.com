@@ -7,7 +7,8 @@ export default function Character(props) {
             <a href="javascript:void(0);">
                 <div className="transition ease-in-out delay-150 hover:scale-105 border-8 border-gray-500 hover:border-green-500 rounded-lg">
                     <img 
-                    src={props.src} 
+                    src={props.src}
+                    alt={props.name} 
                     onClick={props.imageClick}
                     class="object-fit shadow-inner"/>
 
