@@ -9,7 +9,7 @@ export default function Anime(props) {
                 <div className="transition ease-in-out delay-150 hover:scale-105 border-8 border-gray-500 hover:border-green-500 rounded-lg bg-gray-700">
 
                     <div style={{position: 'relative'}} className="object-contain h-80 w-56 items-center mx-auto">
-                        <Image src={props.src} alt={props.title} onClick={props.imageClick} layout="fill" />
+                        <Image src={props.src} alt={props.title} onClick={props.imageClick} layout="fill" priority />
                     </div>
 
                     <div className="bg-gray-800 flex justify-center align-middle">
