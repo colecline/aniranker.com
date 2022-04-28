@@ -17,7 +17,15 @@ export default function Selection(props) {
     }, []);
 
     if (isLoading) {
-        return <p>Loading...</p>
+        return (
+            <>
+            <div className="h-510 bg-white rounded-lg shadow-lg py-10 mb-6 flex items-center justify-center mx-10">
+                <div className="lds-circle">
+                    <div></div>
+                </div>
+            </div>
+            </>
+        )
     }
     if (!data) {
         return <p>No Profile Data</p>
@@ -26,12 +34,12 @@ export default function Selection(props) {
     const api_url = `https://api.aniranker.com/selection?type=${props.type}`;
     
     function getSelection() {
-        // setLoading(true);
+        setLoading(true);
         fetch(`https://api.aniranker.com/selection?type=${props.type}`)
             .then((res) => res.json())
             .then((data) => {
                 setData(data);
-                // setLoading(false);
+                setLoading(false);
         });
     }
 
@@ -67,14 +75,6 @@ export default function Selection(props) {
             { props.type == "characters" ? <Character src={`/images/${props.type}/${data[1].picture_id}.jpg`} name={data[1].name} anime={data[1].anime} url={data[1].url} otherUrl={data[0].url} imageClick={() => imageClick(data[1].url, data[0].url)} /> : <Anime src={`/images/${props.type}/${data[1].picture_id}.jpg`} title={data[1].title} url={data[1].url} otherUrl={data[0].url} imageClick={() => imageClick(data[1].url, data[0].url)} /> }
             </div>
 
-        </div>
-        <div className="text-center bg-white rounded-lg shadow-lg mx-10 py-5">
-            <button className="bg-gray-500 text-white uppercase font-bold py-2 px-5 rounded-lg shadow-lg mb-1" onClick={() => getSelection()}>
-                <a href="javascript:void(0);">Skip</a>
-            </button>
-            <div>
-                <span className="text-xs text-gray-600 font-semibold">Don't know one of the options?</span>
-            </div>
         </div>
         </>
     )

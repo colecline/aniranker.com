@@ -67,23 +67,31 @@ export default function PageButtonTop(props) {
     if (props.type === "characters") {
       return (
         <>
-        <button className='bg-indigo-500 text-white px-2 py-1 text-sm font-bold rounded-tl-md rounded-bl-md'>
-          <a href="javascript:void(0);">Characters</a>
-        </button>
-        <button className='bg-gray-300 text-gray-500 px-2 py-1 text-sm font-bold rounded-tr-md rounded-br-md'>
-          <a href="http://aniranker.com/leaderboard/anime">Anime</a>
-        </button>
+        <a href="javascript:void(0);">
+          <button className='bg-indigo-500 text-white px-2 py-1 text-sm font-bold rounded-tl-md rounded-bl-md'>
+            Characters
+          </button>
+        </a>
+        <a href="http://aniranker.com/leaderboard/anime">
+          <button className='bg-gray-300 text-gray-500 px-2 py-1 text-sm font-bold rounded-tr-md rounded-br-md'>
+            Anime
+          </button>
+        </a>
         </>
       )
     } else {
       return (
         <>
-        <button className='bg-gray-300 text-gray-500 px-2 py-1 text-sm font-bold rounded-tl-md rounded-bl-md'>
-          <a href="http://aniranker.com/leaderboard/characters">Characters</a>
-        </button>
-        <button className='bg-indigo-500 text-white px-2 py-1 text-sm font-bold rounded-tr-md rounded-br-md'>
-          <a href="javascript:void(0);">Anime</a>
-        </button>
+          <a href="http://aniranker.com/leaderboard/characters">
+            <button className='bg-gray-300 text-gray-500 px-2 py-1 text-sm font-bold rounded-tl-md rounded-bl-md'>
+              Characters
+            </button>
+          </a>
+        <a href="javascript:void(0);">
+          <button className='bg-indigo-500 text-white px-2 py-1 text-sm font-bold rounded-tr-md rounded-br-md'>
+            Anime
+          </button>
+        </a>
         </>
       )
     }
