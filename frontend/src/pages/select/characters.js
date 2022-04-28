@@ -35,7 +35,7 @@ export default function SelectCharacters() {
         <Selection type="characters" />
 
         <div className="text-center bg-white rounded-lg shadow-lg mx-10 py-5">
-            <a href="http://aniranker.com/leaderboard/characters">
+            <a href="http://aniranker.com/select/characters">
                 <button className="bg-gray-500 text-white uppercase font-bold py-2 px-5 rounded-lg shadow-lg mb-1" onClick={() => getSelection()}>
                     Skip
                 </button>

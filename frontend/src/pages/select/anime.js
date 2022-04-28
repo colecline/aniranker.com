@@ -32,7 +32,7 @@ export default function SelectAnime() {
         <Selection type="anime" />
         
         <div className="text-center bg-white rounded-lg shadow-lg mx-10 py-5">
-            <a href="http://aniranker.com/leaderboard/anime">
+            <a href="http://aniranker.com/select/anime">
                 <button className="bg-gray-500 text-white uppercase font-bold py-2 px-5 rounded-lg shadow-lg mb-1" onClick={() => getSelection()}>
                     Skip
                 </button>
