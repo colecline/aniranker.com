@@ -1,7 +1,21 @@
+import Head from "next/head";
+
 export default function Home() {
     
     return (
         <>
+
+        <Head>
+            <title>AniRanker | Rank Anime Characters and Shows</title>
+            <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+
+            <meta name="description" content="Rank anime characters or anime shows on AniRanker. Compare different characters, anime and view their ranking on the leaderboard." />
+            <meta name="keywords" content="aniranker, anime ranker, anime character ranker, anime" />
+            <meta name="robots" content="index, follow" />
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+            <meta name="language" content="English" />
+            <meta name="author" content="Cole Cline" />
+        </Head>
 
         <div className="bg-white rounded-lg shadow-lg p-10 mx-10 mb-8">
             <div className="flex justify-center mb-3 space-x-3">

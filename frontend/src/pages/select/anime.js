@@ -1,8 +1,21 @@
+import Head from "next/head";
 import Selection from "../../components/Selection";
 
 export default function SelectAnime() {
     return (
         <>
+        <Head>
+            <title>Rank Anime Shows | AniRanker.com</title>
+            <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+
+            <meta name="description" content="Rank anime shows on AniRanker. Compare different anime shows and view their ranking on the leaderboard." />
+            <meta name="keywords" content="aniranker, anime ranker, anime character ranker, anime" />
+            <meta name="robots" content="index, follow" />
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+            <meta name="language" content="English" />
+            <meta name="author" content="Cole Cline" />
+        </Head>
+
         <div className="text-center mb-5 bg-white py-4 rounded-lg shadow-md mx-10">
             <h1 className="text-3xl font-bold">Select an Anime</h1>
             <p className="text-gray-600 text-sm">Click the image of the better anime to rank them.</p>
