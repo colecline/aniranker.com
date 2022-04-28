@@ -8,7 +8,7 @@ export default function Selection(props) {
 
     useEffect(() => {
         setLoading(true);
-        fetch(`http://api.aniranker.com/selection?type=${props.type}`)
+        fetch(`https://api.aniranker.com/selection?type=${props.type}`)
             .then((res) => res.json())
             .then((data) => {
                 setData(data);
@@ -23,11 +23,11 @@ export default function Selection(props) {
         return <p>No Profile Data</p>
     }
 
-    const api_url = `http://api.aniranker.com/selection?type=${props.type}`;
+    const api_url = `https://api.aniranker.com/selection?type=${props.type}`;
     
     function getSelection() {
         // setLoading(true);
-        fetch(`http://api.aniranker.com/selection?type=${props.type}`)
+        fetch(`https://api.aniranker.com/selection?type=${props.type}`)
             .then((res) => res.json())
             .then((data) => {
                 setData(data);
