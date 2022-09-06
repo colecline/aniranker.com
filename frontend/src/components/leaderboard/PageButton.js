@@ -50,7 +50,7 @@ export default function PageButton(props) {
       }
       
       if (!(currentPageNumber == props.pages)) {
-          buttons.push(<a href={`http://aniranker.com/leaderboard/${props.type}/${props.current + 1}`} className="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"><span className="sr-only">Previous</span><ChevronRightIcon className="h-5 w-5" aria-hidden="true" /></a>)
+          buttons.push(<a href={`http://aniranker.com/leaderboard/${props.type}/${props.current + 1}`} className="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"><span className="sr-only">Previous</span><ChevronRightIcon className="h-5 w-5" aria-hidden="true" /></a>)
       }
 
       return buttons;
@@ -68,7 +68,7 @@ export default function PageButton(props) {
     <div className="bg-gray-200 px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6">
       <div className="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
         <div>
-          <p className="text-sm text-gray-700">
+          <p className="font-lato text-sm text-gray-700">
             Listing {props.type} Ranked <span className="font-semibold">{props.startIndex}</span> thru <span className="font-semibold">{props.endIndex}</span> out of{' '}
             <span className="font-medium">{props.numberOfChars}</span>.
           </p>

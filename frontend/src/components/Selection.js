@@ -61,14 +61,14 @@ export default function Selection(props) {
 
     return (
         <>
-        <div className="flex align-middle justify-center bg-white rounded-lg shadow-lg mx-10 py-10 mb-6">
+        <div className="font-lato flex align-middle justify-center bg-white rounded-md shadow-lg mx-10 py-10 mb-6">
 
             <div className="pl-4">
                 { props.type == "characters" ? <Character src={`/images/${props.type}/${data[0].picture_id}.jpg`} name={data[0].name} anime={data[0].anime} url={data[0].url} otherUrl={data[1].url} imageClick={() => imageClick(data[0].url, data[1].url)} /> : <Anime src={`/images/${props.type}/${data[0].picture_id}.jpg`} title={data[0].title} url={data[0].url} otherUrl={data[1].url} imageClick={() => imageClick(data[0].url, data[1].url)} /> }
             </div>
 
             <div className="my-auto md:mx-10 mx-5">
-                <span className="text-2xl font-bold">vs</span>
+                <span className="text-4xl font-lato font-extrabold">vs</span>
             </div>
 
             <div className="pr-4">

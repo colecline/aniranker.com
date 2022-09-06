@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        lato: ["Lato", "sans-serif"]
+      },
       maxWidth: {
         '241': '241px',
         '150': '150px',

@@ -50,7 +50,7 @@ export default function PageButtonTop(props) {
       }
       
       if (!(currentPageNumber == props.pages)) {
-          buttons.push(<a href={`http://aniranker.com/leaderboard/${props.type}/${props.current + 1}`} className="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"><span className="sr-only">Previous</span><ChevronRightIcon className="h-5 w-5" aria-hidden="true" /></a>)
+          buttons.push(<a href={`http://aniranker.com/leaderboard/${props.type}/${props.current + 1}`} className="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"><span className="sr-only">Previous</span><ChevronRightIcon className="h-5 w-5" aria-hidden="true" /></a>)
       }
 
       return buttons;
@@ -68,12 +68,12 @@ export default function PageButtonTop(props) {
       return (
         <>
         <a href="javascript:void(0);">
-          <button className='bg-indigo-500 text-white px-2 py-1 text-sm font-bold rounded-tl-md rounded-bl-md'>
+          <button className='font-lato bg-indigo-500 text-white px-2 py-1 text-sm font-extrabold rounded-tl-md rounded-bl-md'>
             Characters
           </button>
         </a>
         <a href="http://aniranker.com/leaderboard/anime">
-          <button className='bg-gray-300 text-gray-500 px-2 py-1 text-sm font-bold rounded-tr-md rounded-br-md'>
+          <button className='font-lato bg-slate-400 text-slate-100 px-2 py-1 text-sm font-extrabold rounded-tr-md rounded-br-md'>
             Anime
           </button>
         </a>
@@ -83,12 +83,12 @@ export default function PageButtonTop(props) {
       return (
         <>
           <a href="http://aniranker.com/leaderboard/characters">
-            <button className='bg-gray-300 text-gray-500 px-2 py-1 text-sm font-bold rounded-tl-md rounded-bl-md'>
+            <button className='font-lato bg-slate-400 text-slate-100 px-2 py-1 text-sm font-bold rounded-tl-md rounded-bl-md'>
               Characters
             </button>
           </a>
         <a href="javascript:void(0);">
-          <button className='bg-indigo-500 text-white px-2 py-1 text-sm font-bold rounded-tr-md rounded-br-md'>
+          <button className='font-lato bg-indigo-500 text-white px-2 py-1 text-sm font-bold rounded-tr-md rounded-br-md'>
             Anime
           </button>
         </a>
@@ -99,11 +99,11 @@ export default function PageButtonTop(props) {
 
     return (
     <>
-    <div className="bg-white px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6">
+    <div className="bg-white px-4 py-3 flex items-center justify-between border-gray-200 sm:px-6">
       <div className="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
         <div className='flex'>
-          <h1 className="text-xl font-bold">Leaderboard</h1>
-          <span className='my-auto ml-2 text-sm text-gray-500'>(Rank {props.startIndex}-{props.endIndex})</span>
+          <h1 className="font-lato text-xl font-extrabold">Leaderboard</h1>
+          <span className='font-lato my-auto ml-2 text-sm text-gray-500'>(Rank {props.startIndex}-{props.endIndex})</span>
           <div className='ml-4'>
             {showLeaderboardTypebutton()}
           </div>

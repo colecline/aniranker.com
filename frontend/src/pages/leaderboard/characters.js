@@ -10,7 +10,7 @@ function CharactersLeaderboardDefault(data) {
         <>
 
         <Head>
-            <title>Characters Leaderboard | AniRanker.com</title>
+            <title>Anime Characters Leaderboard | AniRanker</title>
             <meta name="viewport" content="initial-scale=1.0, width=device-width" />
 
             <meta name="description" content="View leaderboard for anime characters on AniRanker." />
@@ -22,7 +22,7 @@ function CharactersLeaderboardDefault(data) {
         </Head>
 
 
-        <div className="mx-12 mb-5 bg-white py-2 rounded-lg shadow-lg">
+        <div className="mx-10 mb-5 bg-white py-2 rounded-md shadow-lg">
             <PageButtonTop 
             startIndex={(parseInt(data.next.page - 2) * 25) + 1 + 0} 
             endIndex={(parseInt(data.next.page - 2) * 25) + 1 + 24} 
@@ -31,15 +31,15 @@ function CharactersLeaderboardDefault(data) {
             type="characters"  
             current={data.meta.current_page} />
         </div>
-        <div className="bg-white mx-12 mb-20 rounded-lg shadow-lg">
+        <div className="bg-white mx-10 mb-20 rounded-md shadow-lg">
 
             <div className="flex justify-center">
                 <table className="table-fixed w-full text-center">
                     <thead className="border-b-2 border-gray-200">
                         <tr>
-                            <th>Rank</th>
-                            <th>Character</th>
-                            <th>Anime</th>
+                            <th className="py-3">Rank</th>
+                            <th className="py-3">Character</th>
+                            <th className="py-3">Anime</th>
                         </tr>
                     </thead>
                     <tbody>

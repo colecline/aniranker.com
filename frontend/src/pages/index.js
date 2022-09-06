@@ -18,67 +18,25 @@ export default function Home() {
             <meta name="author" content="Cole Cline" />
         </Head>
 
-        <div className="bg-white rounded-lg shadow-lg p-10 mx-10 mb-8">
-            <div className="flex justify-center mb-3 space-x-3">
-                
-                <div style={{position: 'relative'}} className="hidden lg:flex h-80 w-52 border-4 border-gray-400">
-                    <Image src="/images/characters/289337.jpg" alt="Anime Character #1" layout="fill" />
+        <section class="mx-10 text-gray-600 body-font">
+            <div class="container mx-auto flex px-5 py-12 md:flex-row flex-col items-center">
+                <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center bg-white p-10 rounded-xl shadow-md">
+                    <h1 class="title-font sm:text-4xl text-3xl mb-4 font-lato font-extrabold text-gray-900">Rank Anime Characters and Anime Shows</h1>
+                    <p class="mb-8 leading-relaxed">Choose between the two to determine the best one out of all of them.</p>
+                <div class="flex justify-center">
+                    <a href="https://aniranker.com/select/characters">
+                    <button class="font-lato inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Rank Characters</button>
+                    </a>
+                    <a href="https://aniranker.com/select/anime">
+                    <button class="font-lato ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Rank Anime</button>
+                    </a>
                 </div>
-
-                <div style={{position: 'relative'}} className="md:h-80 h-60 md:w-52 w-36 border-4 border-gray-400">
-                    <Image src="/images/characters/292046.jpg" alt="Anime Character #2" layout="fill" />
-                </div>
-
-                <div style={{position: 'relative'}} className="md:h-80 h-60 md:w-52 w-36 border-4 border-gray-400">
-                    <Image src="/images/characters/352557.jpg" alt="Anime Character #3" layout="fill" />
-                </div>
-
-                <div style={{position: 'relative'}} className="hidden lg:flex h-80 w-52 border-4 border-gray-400">
-                    <Image src="/images/characters/312836.jpg" alt="Anime Character #4" layout="fill" />
-                </div>
-
             </div>
-            <div className="text-center">
-                <h2 className="text-2xl font-bold">Rank Anime Characters</h2>
-                <p className="text-md text-gray-500 mb-2">Rank and choose the best anime characters.</p>
-                <a href="/select/characters">
-                    <button className="bg-indigo-500 text-white p-2 rounded-md font-semibold border-b-4 border-indigo-700">
-                        Rank Anime Characters
-                    </button> 
-                </a>        
+            <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 hidden md:block">
+                <img class="object-cover object-center rounded" alt="hero" src="asta.png" />
             </div>
-        </div>
-
-        <div className="bg-white rounded-lg shadow-lg p-10 mx-10">
-            <div className="flex justify-center mb-3 space-x-3">
-
-                <div style={{position: 'relative'}} className="hidden lg:flex h-80 w-52 border-4 border-gray-400">
-                    <Image src="/images/anime/103275.jpg" alt="Anime Show #1" layout="fill" />
-                </div>
-
-                <div style={{position: 'relative'}} className="md:h-80 h-60 md:w-52 w-36 border-4 border-gray-400">
-                    <Image src="/images/anime/17405.jpg" alt="Anime Show #2" layout="fill" />
-                </div>
-
-                <div style={{position: 'relative'}} className="md:h-80 h-60 md:w-52 w-36 border-4 border-gray-400">
-                    <Image src="/images/anime/40451.jpg" alt="Anime Show #3" layout="fill" />
-                </div>
-
-                <div style={{position: 'relative'}} className="hidden lg:flex h-80 w-52 border-4 border-gray-400">
-                    <Image src="/images/anime/111943.jpg" alt="Anime Show #4" layout="fill" />
-                </div>
-
             </div>
-            <div className="text-center">
-                <h2 className="text-2xl font-bold">Rank Anime Shows</h2>
-                <p className="text-md text-gray-500 mb-2">Rank and choose the best anime shows.</p>             
-                <a href="/select/anime">
-                    <button className="bg-indigo-500 text-white p-2 rounded-md font-semibold border-b-4 border-indigo-700">
-                        Rank Anime Shows
-                    </button> 
-                </a>
-            </div>
-        </div>
+        </section>
 
         </>
     )

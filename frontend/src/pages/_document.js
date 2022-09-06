@@ -9,8 +9,12 @@ export default class MyDocument extends Document {
     render () {
         return (
             <Html lang="en">
-                <Head />
-                <body className="bg-gray-300 antialiased mx-auto items-center">
+                <Head>
+                    <link rel="preconnect" href="https://fonts.googleapis.com" />
+                    <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+                    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet" />
+                </Head>
+                <body className="bg-slate-200 antialiased mx-auto items-center">
                     <Main />
                     <NextScript />
                 </body>

@@ -2,12 +2,12 @@ import Link from "next/link";
 import { useState } from "react";
 
 import {
-    MenuIcon
+    MenuIcon,
 } from "@heroicons/react/outline";
 
 const navigation = [
-    { name: 'Rank Characters', href: 'http://aniranker.com/select/characters' },
-    { name: 'Rank Anime', href: 'http://aniranker.com/select/anime' },
+    { name: 'Characters', href: 'http://aniranker.com/select/characters' },
+    { name: 'Anime', href: 'http://aniranker.com/select/anime' },
     { name: 'Leaderboard', href: 'http://aniranker.com/leaderboard/characters'},
 ];
 
@@ -23,26 +23,19 @@ export default function Header() {
     
     return (
         <>
-        <nav className="bg-white mb-8 shadow-md transition duration-300 ease-in-out">
+        <nav className="font-lato bg-white md:bg-transparent transition duration-300 ease-in-out">
             <div className="max-w-6xl mx-auto px-10 py-4">
-                <div className="flex justify-between">
+                <div className="flex justify-between md:bg-white md:py-4 md:px-10 md:rounded-lg md:shadow-md">
 
                     <div className="flex space-x-6 items-center">
-
                         {/* Navigation Bar Logo */}
                         <div className="flex">
                         <a href="http://aniranker.com/">
-                            <span className="text-xl font-bold lowercase">AniRank</span>
-                        </a>
-                        <a href="http://aniranker.com/" className="mt-0.5">
-                            <span className="uppercase font-extrabold text-xs text-gray-400 ml-2">Beta</span>
+                            <span className="text-xl font-sans font-extrabold lowercase">AniRanker</span>
                         </a>
                         </div>
 
-                        {/* Logo and Left Navigation Spacer */}
-                        <div className="hidden md:flex bg-gray-300 w-0.5"><div className="text-gray-300 opacity-10">|</div></div>
-
-                        <div className="hidden md:flex items-center space-x-4 text-gray-500 font-bold text-sm">
+                        <div className="hidden md:flex items-center space-x-4 text-gray-500 font-bold text-md">
                             { navigation.map((item) => (
                                     <Link
                                     key={item.name}
@@ -56,11 +49,19 @@ export default function Header() {
 
                     </div>
 
-                    {/* Mobile Menu Button */}
-                    <div className="md:hidden flex items-center">
-                        <button onClick={toggleMobileMenu}>
-                            <MenuIcon className="h-6 w-6" />
-                        </button>
+                    <div>
+                        {/* <div className="hidden md:block">
+                            <div className="flex">
+                            <span>GitHub</span>
+                            </div>
+                        </div> */}
+
+                        {/* Mobile Menu Button */}
+                        <div className="md:hidden flex items-center">
+                            <button onClick={toggleMobileMenu}>
+                                <MenuIcon className="h-6 w-6" />
+                            </button>
+                        </div>
                     </div>
 
                 </div>
