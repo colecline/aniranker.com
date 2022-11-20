@@ -11,29 +11,11 @@ async function getData() {
 	return res.json();
 }
 
-async function CharactersLeaderboardPage() {
+export default async function CharactersLeaderboardPage() {
 	const data = await getData();
 
 	return (
 		<>
-			<Head>
-				<title>Anime Characters Leaderboard | AniRanker</title>
-				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
-
-				<meta
-					name="description"
-					content="View leaderboard for anime characters on AniRanker."
-				/>
-				<meta
-					name="keywords"
-					content="aniranker, anime ranker, anime character ranker, anime"
-				/>
-				<meta name="robots" content="index, follow" />
-				<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-				<meta name="language" content="English" />
-				<meta name="author" content="Cole Cline" />
-			</Head>
-
 			<PageButtonTop
 				startIndex={parseInt(data.next.page - 2) * 25 + 1 + 0}
 				endIndex={parseInt(data.next.page - 2) * 25 + 1 + 24}
@@ -79,15 +61,3 @@ async function CharactersLeaderboardPage() {
 		</>
 	);
 }
-
-CharactersLeaderboardPage.getInitialProps = async (ctx) => {
-	const { page } = ctx.query;
-
-	const res = await fetch(
-		`https://api.aniranker.com/leaderboard?type=characters&page=1`
-	);
-	const json = await res.json();
-	return json;
-};
-
-export default CharactersLeaderboardPage;
