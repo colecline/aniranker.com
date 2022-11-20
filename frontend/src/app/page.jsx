@@ -20,13 +20,13 @@ export default function HomePage() {
 					{/* Hero Left Button Section */}
 					<div className="mt-4 flex space-x-3">
 						<button className="rounded bg-orange-600 px-6 py-3 text-lg font-semibold text-white">
-							<a href="http://localhost:3000/vote/characters">
+							<a href="https://aniranker.com/vote/characters">
 								Rank Characters
 							</a>
 						</button>
 
 						<button className="rounded bg-zinc-600 px-6 py-3 text-lg font-semibold text-white">
-							<a href="http://localhost:3000/vote/anime">Rank Shows</a>
+							<a href="https://aniranker.com/vote/anime">Rank Shows</a>
 						</button>
 					</div>
 
